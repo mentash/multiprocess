@@ -1,7 +1,7 @@
 
 import time
 import multiprocessing
-#import do_something
+
 
 """ 
 Measuring Code Performance Using perf_counter(). 
@@ -10,7 +10,7 @@ Place perf_counter() before and after code execution:
 
 
 def do_something(seconds):
-    print('Sleeping 1 second...')
+    print(f'Sleeping {seconds} second...')
     time.sleep(seconds)
     print('Done Sleeping...')
 
@@ -24,7 +24,7 @@ if __name__ == '__main__':
     
     for _ in range(10):
         # Create process(es) object(s)
-        p = multiprocessing.Process(target=do_something, args=[1.5])
+        p = multiprocessing.Process(target=do_something, args=[5])
         # Run the process
         p.start()
         # Append each process to the list
